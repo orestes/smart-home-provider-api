@@ -1,0 +1,35 @@
+{
+  "devices": [
+    {
+      "id": "light-one",
+      "type": "action.devices.types.LIGHT",
+      "traits": [
+        "action.devices.traits.OnOff",
+        "action.devices.traits.Brightness",
+        "action.devices.traits.ColorSetting"
+      ],
+      "name": {
+        "defaultNames": [
+          "rgb-led"
+        ],
+        "name": "RGB LED one",
+        "nicknames": [
+          "RGB LED one"
+        ]
+      },
+      "willReportState": false,
+      "attributes": {
+        "colorModel": "rgb",
+        "commandOnlyColorSetting": true
+      },
+      "deviceInfo": {
+        "manufacturer": "Orestes Inc.",
+        "model": "rgb-led-clear",
+        "hwVersion": "1.0",
+        "swVersion": "2.0"
+      },
+      "customData": {
+      }
+    }
+  ]
+}
