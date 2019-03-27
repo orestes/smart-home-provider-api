@@ -17,14 +17,16 @@ export class AuthController {
   login(@Query() query, @Res() res) {
     const queryStringValue = queryString.stringify(query);
 
-    this.logger.debug({ queryString: queryStringValue }, 'Getting login');
+    this.logger.debug({ queryString: queryStringValue }, 'Getting login URI');
 
     // TODO: Save target redirect in config/env variables
-    const url = `c7faa536.ngrok.io`;
+    const url = `toy-home.firebaseapp.com`;
+
+    const redirect = `https://${url}/login?${queryStringValue}`;
 
     res
       .status(HttpStatus.FOUND)
-      .set('Location', `https://${url}/login?${queryStringValue}`)
+      .set('Location', redirect)
       .send();
   }
 
